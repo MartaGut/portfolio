@@ -1,0 +1,36 @@
+.btn {
+    padding: 20px;
+    border: 2px solid $black;
+    border-radius: 50px;
+    background-color: $white;
+    color: $black;
+    text-decoration: none;
+}
+
+.btn--eggplant {
+    border-color: $eggplant;
+    color: $eggplant;
+    background: linear-gradient(to right, $eggplant 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+
+    &:hover {
+        color: $white;
+        background-color: $eggplant;
+        background-position: left bottom;
+    }
+}
+
+.btn--green {
+    border-color: $green;
+    color: $eggplant;
+    background: linear-gradient(to right, $green 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+
+    &:hover {
+        color: $white;
+        background-color: $green;
+        background-position: left bottom;
+    }
+}

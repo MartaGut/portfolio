@@ -1,0 +1,91 @@
+//colors
+$white: #fff;
+$black: #000;
+$coffee: #372F2C;
+$marine: #7CFFCB;
+$green: #379634;
+$avocado: #0A3200;
+$eggplant: #744F62;
+
+//hover 
+
+@media (hover: hover) {
+    a {
+        transition: 0.5s;
+    }
+}
+
+//helpers 
+
+.wrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+//font 
+$font-default: 'Montserrat',
+Helvetica,
+sans-serif;
+
+* {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+
+    >.content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+//breakpoints 
+
+$breakpoints: ('small': (max-width: 767px),
+    'medium': (max-width: 992px),
+    'large': (max-width: 1200px)) !default;
+
+    @mixin respond-to($breakpoint) {
+
+        // If the key exists in the map
+        @if map-has-key($breakpoints, $breakpoint) {
+
+            // Prints a media query based on the value
+            @media #{inspect(map-get($breakpoints, $breakpoint))} {
+                @content;
+            }
+        }
+    }

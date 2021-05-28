@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "myFont";
+  src: url("app/fonts/iconfont/myFont.eot");
+  src: url("app/fonts/iconfont/myFont.eot?#iefix") format("eot"), url("app/fonts/iconfont/myFont.woff2") format("woff2"), url("app/fonts/iconfont/myFont.woff") format("woff"), url("app/fonts/iconfont/myFont.ttf") format("truetype"), url("app/fonts/iconfont/myFont.svg#myFont") format("svg"); }
+
+.icon:before {
+  font-family: "myFont";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none; }
+
+.icon-uEA01-airplane:before {
+  content: "\E001"; }
+
+.icon-uEA02-airport:before {
+  content: "\E002"; }
+
+.icon-uEA03-alarm:before {
+  content: "\E003"; }
+
+h1 {
+  color: blue; }

@@ -1,0 +1,43 @@
+footer {
+    width: 100%;
+}
+
+.footer__background {
+    background-color: $eggplant;
+    padding-bottom: 40px;
+}
+
+.icon {
+    @include icon-styles;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.footer__text,
+.footer__socials,
+.footer__img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer__img {
+    max-width: 120px;
+    max-height: 120px;
+    margin-bottom: 40px;
+}
+
+.footer__text {
+    font-size: 20px;
+    font-weight: bold;
+    color: $white;
+    padding: 40px 0;
+}
+
+.footer__social-link {
+    color: $avocado;
+
+    &:hover {
+        color: $green;
+    }
+}

@@ -1,0 +1,250 @@
+// .banner {
+//     position: relative;
+// }
+
+.banner__container {
+    position: relative;
+}
+
+.banner__img-container {
+    @include aspect-ratio(7, 5);
+}
+
+.banner__img {
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.banner__name,
+.banner__position {
+    background-color: $white;
+    display: inline-block;
+    position: absolute;
+    left: 150px;
+
+    @include respond-to('medium') {
+        left: 40px;
+    }
+
+    // @include respond-to('small') {
+    //     font-size: 20px;
+    // }
+}
+
+.banner__title,
+.banner__position {
+    color: $green;
+    font-size: 62px;
+    font-weight: 600;
+    margin: 0;
+
+    @include respond-to('medium') {
+        font-size: 30px;
+    }
+
+    @include respond-to('small') {
+        font-size: 20px;
+    }
+}
+
+.banner__title,
+.banner__position-text {
+    display: block;
+    @include center;
+    color: $eggplant;
+
+    @include respond-to('small') {
+        left: 36%;
+    }
+}
+
+.banner__title {
+    @include respond-to('small') {
+        left: 20%;
+    }
+}
+
+.banner__position {
+    top: 50%;
+
+    .banner__flip {
+        top: 30px;
+    }
+
+    @include respond-to('medium') {
+        top: 55%
+    }
+
+    @include respond-to('small') {
+        top: 60%
+    }
+}
+
+.banner__name {
+    top: 10%;
+
+
+    @include respond-to('medium') {
+        top: 18%;
+    }
+
+    // @include respond-to('small') {
+    //     font-size: 20px;
+    // }
+}
+
+.flip-card {
+    perspective: 1000px;
+    background-color: transparent;
+    width: 400px;
+    height: 300px;
+
+    @include respond-to('medium') {
+        width: 300px;
+        height: 200px;
+    }
+
+    @include respond-to('small') {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+.flip-card:hover .flip-outer,
+.flip-card.hover .flipouter {
+    transform: rotateY(180deg);
+}
+
+.flip-outer {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.flip-front,
+.flip-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.flip-front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    width: 400px;
+    height: 300px;
+    border: 10px solid $eggplant;
+
+    @include respond-to('medium') {
+        width: 300px;
+        height: 200px;
+    }
+
+    @include respond-to('small') {
+        width: 200px;
+        height: 100px;
+        border: 5px solid $eggplant;
+    }
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+    position: relative;
+    border: 10px solid $green;
+    width: 400px;
+    height: 300px;
+
+    @include respond-to('medium') {
+        width: 300px;
+        height: 200px;
+    }
+
+    @include respond-to('small') {
+        width: 200px;
+        height: 100px;
+        border: 5px solid $eggplant;
+    }
+
+    .banner__position {
+        font-size: 20px;
+
+        .btn--green {
+            color: $avocado;
+        }
+    }
+
+    .banner__position-back-link {
+        font-size: 20px;
+        color: $avocado;
+
+        &:first-child {
+            top: 30%;
+        }
+
+        &:last-child {
+            top: 70%;
+        }
+
+        @include respond-to('medium') {
+            font-size: 16px;
+            padding: 10px;
+            top: 18%;
+        }
+    
+        @include respond-to('small') {
+            font-size: 14px;
+            &:first-child {
+                left: 25%;
+                max-width: 83px;
+                min-height: 83px;
+                top: 49%;
+            }
+    
+            &:last-child {
+                left: 73%;
+                top: 45px;
+            }
+        }
+    }
+}
+
+.banner__cv {
+    display: block;
+    @include center;
+    text-align: center;
+    background-color: transparent;
+    color: $green;
+    font-weight: 20px;
+    font-weight: 600;
+
+    @include respond-to('small') {
+        padding: 5px;
+        }
+}
+
+.banner__flip {
+    right: 20px;
+    top: 20px;
+    color: $green;
+    position: absolute;
+    text-decoration: none;
+
+    .icon {
+        background-color: $eggplant;
+        border-radius: 50px;
+    }
+
+    @include respond-to('medium') {
+        top: 30px;
+    }
+
+    // @include respond-to('small') {
+    //     width: 200px;
+    //     height: 100px;
+    //     border: 5px solid $eggplant;
+    // }
+}

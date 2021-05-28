@@ -1,0 +1,14 @@
+.skills {
+    margin-bottom: 40px;
+}
+.skills__flex-item {
+    flex: 1 1 33%;
+    margin: 10px;
+    padding: 20px;
+    &:nth-child(odd) {
+        border: 10px solid $green;
+    }
+    &:nth-child(even) {
+        border: 10px solid $eggplant;
+    }
+}
