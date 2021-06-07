@@ -114,7 +114,7 @@
 
 .flip-card:hover .flip-outer,
 .flip-card.hover .flipouter {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateZ(1px); ;
 }
 
 .flip-outer {
@@ -126,6 +126,7 @@
 .flip-front,
 .flip-back {
     backface-visibility: hidden;
+    // -webkit-backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -134,7 +135,7 @@
 .flip-front {
     z-index: 2;
     /* for firefox 31 */
-    transform: rotateY(0deg);
+    transform: rotateY(0deg) translateZ(1px);
     width: 400px;
     height: 300px;
     border: 10px solid $eggplant;
