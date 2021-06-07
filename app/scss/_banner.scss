@@ -114,19 +114,23 @@
 
 .flip-card:hover .flip-outer,
 .flip-card.hover .flipouter {
-    transform: rotateY(180deg) translateZ(1px); ;
+    transform: rotateY(180deg) translateZ(1px);
 }
 
 .flip-outer {
     transition: 0.6s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
     position: relative;
 }
 
 .flip-front,
 .flip-back {
     backface-visibility: hidden;
-    // -webkit-backface-visibility: hidden;
+    -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    visibility:visible;
     position: absolute;
     top: 0;
     left: 0;
@@ -153,7 +157,7 @@
 }
 
 .flip-back {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateZ(1px);
     position: relative;
     border: 10px solid $green;
     width: 400px;
